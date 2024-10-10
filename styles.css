@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: 100%;
+    background-color: rgb(4, 4, 32);
+}
+
+.login-container {
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    filter: blur();
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: glow 2s infinite;/*kontainer login*/
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #000000; /*tempat penyesuaian hruf */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    width: 30%;
+    padding: 10px;
+    background-color: #04ff04;
+    color: #0b07ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; /*tempat penyesuaian tombol login*/
+    transition: background-color 0.3s, transform 0.3s ;
+}
+
+input[type="submit"] :hover {
+    background-color: #ffffff;
+}
+
+input[type="submit"] :active {
+    background-color: #1201fa;
+    transform: scale(0.9);
+}
+
+input[type="submit"]:focus {
+    box-shadow: 0 0 10px #0a0000;
+}
+#login-response {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #080000;
+}
